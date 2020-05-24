@@ -1,0 +1,363 @@
+:root {
+  --cream: rgb(255, 253, 221);
+  --peach: rgb(255, 165, 82);
+  --dark-blue: rgba(27, 42, 65, 0.8);
+  --reddish-brown: rgb(86, 29, 37);
+  --pinkish: rgb(244, 185, 178);
+  --bluish-green: rgb(80, 108, 100);
+  --lightish-green: rgb(38, 169, 108);
+  --creamish: rgb(159, 126, 105);
+  --orange: rgb(255, 165, 82);
+  --soft-black: rgb(35, 38, 36);
+  --cream-peach: rgb(251, 209, 162);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url("https://img.wallpapersafari.com/desktop/1920/1080/89/75/sv4bZ3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+header {
+  color: var(--cream);
+  height: 50px;
+  font-size: 33px;
+  text-align: center;
+  padding-top: 62px;
+  padding-bottom: 80px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.header_animated_container {
+  display: inline-block;
+  position: relative;
+}
+
+#cowboy_hat {
+  background-image: url("https://www.pikpng.com/pngl/b/421-4212112_days-gone-by-cowboy-hat-clipart.png");
+  width: 135px;
+  height: 92px;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: -50px;
+  left: 21px;
+}
+
+.underhat_word {
+  display: inline-block;
+}
+
+#cowboy_hat {
+  animation-name: animateHat;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+}
+
+@keyframes animateHat {
+  0% {
+    rotate: 0deg;
+  }
+
+  50% {
+    rotate: 25deg;
+  }
+
+  80% {
+    rotate: -10deg;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categories {
+  text-align: center;
+  margin: 24px 0px;
+}
+
+.select_category_button {
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  padding: 10px 12px;
+  background-color: var(--dark-blue);
+  border: 4px solid var(--cream);
+  border-radius: 17px;
+  text-transform: uppercase;
+  color: white;
+  margin: 6px 3px;
+  letter-spacing: 1px;
+  box-shadow: 1px 1px 7px 1px var(--peach);
+  cursor: pointer;
+}
+
+.select_category_button:active {
+  transform: translateY(2px);
+}
+.select_category_button:hover {
+  background-color: var(--reddish-brown);
+  border: 3px solid var(--cream);
+  box-shadow: 1px 1px 7px 5px var(--peach);
+}
+
+.search_bar {
+  margin: 14px 0px;
+}
+
+#submit_form {
+  width: 300px;
+}
+
+.search_bar input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 9px;
+  border: 3px solid var(--creamish);
+  box-shadow: 1px 1px 14px 1px var(--cream);
+}
+
+.jokes_container {
+  opacity: 0;
+  max-width: 680px;
+  background: var(--bluish-green);
+  border-radius: 20px;
+  position: relative;
+  margin: 20px;
+  border: 7px solid var(--cream);
+  color: var(--cream);
+}
+
+.show_jokes_container {
+  opacity: 1;
+  transition: opacity 1s;
+  animation-name: showJokeContainer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes showJokeContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* #favorite_jokes .jokes_container {
+  padding: 10px 0;
+} */
+
+#favorite_jokes {
+  width: 92%;
+  border-radius: 18px;
+  /* margin: 0 auto; */
+  box-shadow: 1px 1px 19px 1px var(--cream);
+}
+
+.photo_icon {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-image: url("https://images7.alphacoders.com/405/thumb-1920-405808.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.fa-heart {
+  color: var(--pinkish);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.heart_container {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+}
+
+#link_container {
+  font-size: 11px;
+}
+
+#link_container span {
+  color: #ababab;
+}
+
+#link_container a {
+  color: rgb(97, 146, 187);
+}
+
+.fa-external-link-alt {
+  color: rgb(97, 146, 187);
+}
+
+.description {
+  padding: 20px 27px 10px 67px;
+}
+
+.link {
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+
+.link a {
+  color: var(--cream);
+}
+
+.joke {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.last_update {
+  font-size: 10px;
+  align-self: center;
+}
+
+.category {
+  font-size: 12px;
+  background-color: var(--lightish-green);
+  padding: 6px 8px;
+  border-radius: 3px;
+  color: var(--cream);
+  letter-spacing: 1px;
+}
+
+.not_found_container {
+  position: absolute;
+  padding: 20px 30px;
+  background-color: var(--orange);
+  opacity: 0;
+  top: 300px;
+  color: var(--soft-black);
+  border-radius: 14px;
+  box-shadow: 1px 1px 12px 6px var(--cream);
+  border: 1px solid var(--cream-peach);
+  font-size: 14px;
+}
+
+#close_mark {
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  width: 10px;
+  height: 16px;
+  background-color: var(--cream-peach);
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 1px 8px 6px var(--cream);
+  font-weight: bold;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+#close_mark:hover {
+  opacity: 0.9;
+}
+
+#close_mark:active {
+  transform: translateY(2px);
+  opacity: 1;
+}
+
+.show_not_found_container {
+  opacity: 1;
+  transition: opacity 1s;
+  animation-name: showWordNotFoundContainer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes showWordNotFoundContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  flex-shrink: 0;
+  color: var(--cream);
+  text-align: center;
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    font-size: 45px;
+    padding-bottom: 160px;
+  }
+
+  .categories {
+    margin: 40px 0 35px 0;
+  }
+
+  .search_bar {
+    margin-bottom: 20px;
+  }
+
+  #submit_form {
+    width: 340px;
+  }
+
+  #favorite_jokes {
+    width: 70%;
+  }
+
+  .not_found_container {
+    top: 210px;
+    padding: 35px 60px;
+  }
+
+  #close_mark {
+    top: 12px;
+    right: 14px;
+  }
+}
