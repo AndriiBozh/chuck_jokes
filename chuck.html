@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="jokes.css" />
+    <title>ChN Jokes</title>
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        Chuck
+        <div class="header_animated_container">
+          <div id="cowboy_hat"></div>
+          <div class="underhat_word">Norris</div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="controls">
+          <div class="categories">
+            <button
+              class="select_category_button"
+              value="random"
+              onclick="getValue()"
+            >
+              Random
+            </button>
+
+            <button
+              class="select_category_button"
+              value="animal"
+              onclick="getValue()"
+            >
+              Animal
+            </button>
+            <button
+              class="select_category_button"
+              value="career"
+              onclick="getValue()"
+            >
+              Career
+            </button>
+            <button
+              class="select_category_button"
+              value="celebrity"
+              onclick="getValue()"
+            >
+              Celebrity
+            </button>
+            <button
+              class="select_category_button"
+              value="dev"
+              onclick="getValue()"
+            >
+              Dev
+            </button>
+          </div>
+
+          <div class="search_bar">
+            <form action="" id="submit_form">
+              <input
+                name="input_field"
+                type="text"
+                id="input_word"
+                placeholder="search by word or by phrase"
+              />
+            </form>
+          </div>
+        </div>
+
+        <div id="original" class="jokes_container">
+          <div class="heart_container">
+            <i id="heart" class="far fa-heart"></i>
+          </div>
+
+          <div class="photo_icon"></div>
+
+          <div id="main_content">
+            <div id="description">
+              <p id="link_container"></p>
+              <p id="joke"></p>
+              <p id="last_update"></p>
+              <p id="category"></p>
+            </div>
+          </div>
+        </div>
+        <div id="favorite_jokes"></div>
+        <div id="not_found" class="not_found_container">
+          <div id="word_not_found"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">2020 &copy; AB</footer>
+    <script src="jokes.js"></script>
+  </body>
+</html>
